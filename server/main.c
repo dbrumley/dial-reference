@@ -307,6 +307,9 @@ void runDial(void)
         
         DIAL_stop(ds);
     }
+    DIAL_unregister_app(ds, "system");
+    DIAL_unregister_app(ds, "Netflix");
+    DIAL_unregister_app(ds, "YouTube");
     free(ds);
 }
 

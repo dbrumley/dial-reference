@@ -327,6 +327,7 @@ static int start_thread(struct mg_context *ctx, mg_thread_func_t func,
     cry(fc(ctx), "%s: %s", __func__, strerror(retval));
   }
 
+  pthread_attr_destroy(&attr);
   return retval;
 }
 
